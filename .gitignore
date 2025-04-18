@@ -1,0 +1,36 @@
+# === Fichiers Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+*.egg
+*.log
+*.sqlite3
+.env
+.venv/
+env/
+venv/
+
+# === Fichiers PHP ===
+vendor/
+*.log
+.env
+
+# === VS Code ===
+.vscode/
+
+# === macOS ===
+.DS_Store
+
+# === Node/npm (si tu utilises du JS avec ton projet PHP) ===
+node_modules/
+package-lock.json
+
+# === Général ===
+*.bak
+*.swp
+*.tmp
+*.idea/
