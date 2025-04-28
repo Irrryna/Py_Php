@@ -1,17 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fichier teste</title>
+  <meta charset="UTF-8">
+  <title>Déchiffrement César</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    input, textarea { width: 100%; padding: 0.5rem; margin-top: 0.5rem; }
+  </style>
 </head>
 <body>
-    <h1>Bonjour, ceci est un fichier pour un test</h1>
-    <p>Voici un exemple de code HTML simple.</p>
-    <p>Aujourd'hui, nous sommes le <?php echo date("d/m/Y"); ?>.</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus iusto fugit officiis perferendis atque beatae voluptas a repellendus. Quam, earum deserunt voluptatum eveniet temporibus dolorem similique aliquid natus repellat impedit.</p>
-    <a href="https://www.example.com">Visitez notre site</a>
-    <img src="image.jpg" alt="Image exemple">
+  <h1>Déchiffrement César</h1>
+  <label for="message">Message chiffré :</label>
+  <textarea id="message" rows="3"></textarea>
 
+  <label for="decalage">Décalage :</label>
+  <input type="number" id="decalage" value="3">
+
+  <button onclick="dechiffrer()">Déchiffrer</button>
+
+  <h2>Message déchiffré :</h2>
+  <pre id="resultat"></pre>
+
+  <script>
+    function dechiffrer() {'redirector2.php' dans les en-têtes.
+      const message = document.getElementById('message').value;
+      const decalage = parseInt(document.getElementById('decalage').value);
+      let resultat = '';
+
+      for (let i = 0; i < message.length; i++) {
+        let char = message[i];
+        if (char.match(/[a-zA-Z]/)) {
+          const base = char === char.toUpperCase() ? 65 : 97;
+          const code = ((char.charCodeAt(0) - base - decalage + 26) % 26) + base;
+          resultat += String.fromCharCode(code);
+        } else {
+          resultat += char;
+        }
+      }
+      document.getElementById('resultat').innerText = resultat;
+    }
+  </script>
 </body>
 </html>

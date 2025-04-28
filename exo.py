@@ -76,3 +76,26 @@ def somme_liste(liste):
     return somme
 
 print(somme_liste([1, 2, 3, 4])) # Affiche 10
+
+def plus_grand_nombre(liste):
+    max_nombre = liste[0]
+    for i in liste:
+        if i > max_nombre:
+            max_nombre = i
+    return max_nombre
+print(plus_grand_nombre([3, 58, 11, 21])) # Affiche 58
+
+def factorielle(n):
+ resultat = n
+ for i in range(1, n):
+    resultat *= i
+ return resultat
+print(factorielle(5)) # Affiche 120
+
+def est_palindrome(mot):
+ longueur = len(mot)
+ for i in range(longueur // 2):
+    if mot[i] != mot[longueur - i - 1]:
+        return False
+        return True
+print(est_palindrome("radar")) # Affiche True

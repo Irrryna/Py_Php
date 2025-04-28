@@ -8,6 +8,8 @@ foreach ($test as $key => $value) {
     $total += $value + $total;
 }
 printf($total);
+
+
                #booleen 
 for ($index=0; $index < 0; $index++) {
    
